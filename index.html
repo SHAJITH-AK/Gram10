@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gram10 – English Grammar Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav><a href="#home" class="logo" data-go="home">Gram<b>10</b></a>
+<div><a href="#" data-go="home">Home</a><a href="#" data-go="topics">Topics</a><a href="#" data-go="practice">Practice</a></div></nav>
+<main>
+<section id="home" class="view">
+ <div class="hero"><h1>Gram10</h1><p class="tag">Master English Grammar, One Question at a Time.</p>
+ <p>Free MCQ practice for Class 10 students. No login, no sign-up. Pick a topic, answer, and learn from Tamil explanations when you slip.</p>
+ <button class="btn" data-go="practice">Start Practising</button></div>
+ <div class="grid" id="homeCards"></div>
+</section>
+<section id="topics" class="view"><h2>Grammar Topics</h2><div class="grid" id="topicCards"></div></section>
+<section id="practice" class="view">
+ <div id="setup" class="panel"><h2>Set up your practice</h2>
+  <label>Topic<select id="selTopic"></select></label>
+  <label>Difficulty<select id="selDiff"><option value="all">All levels</option><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
+  <label>Number of questions<select id="selCount"><option value="10">10 questions</option><option value="all">All available</option></select></label>
+  <button class="btn" id="startBtn">Start Practice</button><p id="setupMsg" class="msg"></p></div>
+ <div id="quiz" class="panel" hidden>
+  <div class="top"><span id="qNum"></span><span id="score"></span></div>
+  <div class="bar"><i id="barFill"></i></div>
+  <h3 id="qText"></h3><div id="opts"></div>
+  <div id="fb" class="fb" hidden></div>
+  <div class="row"><button class="btn" id="submitBtn" disabled>Submit Answer</button><button class="btn alt" id="nextBtn" hidden>Next Question</button></div>
+ </div>
+</section>
+<section id="results" class="view"><div class="panel center"><h2>Your Results</h2><div class="big" id="rScore"></div>
+ <div class="stats"><div><b id="rTotal"></b>Total</div><div><b id="rRight"></b>Correct</div><div><b id="rWrong"></b>Wrong</div><div><b id="rAcc"></b>Accuracy</div></div>
+ <div class="row c"><button class="btn" id="retryWrong">Retry Incorrect Questions</button><button class="btn alt" id="restartBtn">Restart Practice</button><button class="btn alt" data-go="home">Return to Home</button></div></div></section>
+</main>
+<footer>Gram10 · Free practice for Tamil Nadu Class 10 students</footer>
+<script src="js/questions.js"></script><script src="js/quiz.js"></script><script src="js/main.js"></script>
+</body></html>
